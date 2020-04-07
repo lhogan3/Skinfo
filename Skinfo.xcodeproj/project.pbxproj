@@ -16,6 +16,7 @@
 		0CD7328423FCBA1400DF3A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD7328223FCBA1400DF3A6D /* LaunchScreen.storyboard */; };
 		0CD7328F23FCBA1400DF3A6D /* SkinfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7328E23FCBA1400DF3A6D /* SkinfoTests.swift */; };
 		0CD7329A23FCBA1400DF3A6D /* SkinfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7329923FCBA1400DF3A6D /* SkinfoUITests.swift */; };
+		500D9B86243C1F8900EA38DB /* SkiArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D9B85243C1F8900EA38DB /* SkiArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0CD7329523FCBA1400DF3A6D /* SkinfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkinfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD7329923FCBA1400DF3A6D /* SkinfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinfoUITests.swift; sourceTree = "<group>"; };
 		0CD7329B23FCBA1400DF3A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500D9B85243C1F8900EA38DB /* SkiArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0CD7328023FCBA1400DF3A6D /* Assets.xcassets */,
 				0CD7328223FCBA1400DF3A6D /* LaunchScreen.storyboard */,
 				0CD7328523FCBA1400DF3A6D /* Info.plist */,
+				500D9B85243C1F8900EA38DB /* SkiArea.swift */,
 			);
 			path = Skinfo;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500D9B86243C1F8900EA38DB /* SkiArea.swift in Sources */,
 				0CD7327623FCBA0F00DF3A6D /* AppDelegate.swift in Sources */,
 				0CD7327823FCBA0F00DF3A6D /* SceneDelegate.swift in Sources */,
 				0CD7327A23FCBA0F00DF3A6D /* MasterViewController.swift in Sources */,
