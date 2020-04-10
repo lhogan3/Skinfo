@@ -14,41 +14,38 @@ class Storage {
     //------------------------------------------------------------------------------------------------
     
     func createItem() -> SkiArea {
-//        let path = Bundle.main.path(forResource: "db", ofType: "sqlite3")!
-//        let db = try! Connection(path, readonly: true)
+        //This is all test code and will be replaced in the future when db is fully implemented
         
-//        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".db")
+        //Copy skiArea db to documents folder stored directly on device that is running skinfo
         copyDatabaseIfNeeded()
         
+        //Path to documents folder
         let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
         ).first!
 
+        //Connect to db in documents folder
         let db = try! Connection("\(path)/skiAreaDBtest.db")
         
+        //Table named skiAreas in db
         let skiAreas = Table("skiAreas")
         
-//        let name = Expression<String?>("name")
-        
+        //Create 'Expression' in order to be used to reference 'Name' column
         let Name = Expression<String>("Name")
         
-//        for skiArea in try! db.prepare(skiAreas.select(names)) {
-//            print("id: \(skiAreas)")
-//            print(names)
-//            // id: 1, email: alice@mac.com
-//        }
-        
+        //Start query by selecting all ski area names
         let query = skiAreas.select(Name)
+        
+        //Execute query
         let results = try! db.prepare(query)
+        
+        //Print name of ski areas in db
         print(try! db.scalar("SELECT Name FROM skiAreas")!)
 
+        //Another way to print a Row object
         for item in results{
             print(item)
         }
-        
-//        print(query)
-        
-//        print(names)
         
         let newItem = SkiArea(name: "Ski Area")
         return newItem
@@ -89,29 +86,8 @@ class Storage {
     
     //------------------------------------------------------------------------------------------------
     
-    func copyFilesFromBundleToDocumentsFolderWith(fileExtension: String) {
-        if let resPath = Bundle.main.resourcePath {
-            do {
-                let dirContents = try FileManager.default.contentsOfDirectory(atPath: resPath)
-                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-                let filteredFiles = dirContents.filter{ $0.contains(fileExtension)}
-                for fileName in filteredFiles {
-                    if let documentsURL = documentsURL {
-                        let sourceURL = Bundle.main.bundleURL.appendingPathComponent(fileName)
-                        let destURL = documentsURL.appendingPathComponent(fileName)
-                        do { try FileManager.default.copyItem(at: sourceURL, to: destURL) } catch {}
-                    }
-                }
-            } catch {
-            }
-        }
-    }
-    
-    //------------------------------------------------------------------------------------------------
-    
     init() {
         createItem()
-    
     }
     
 }
