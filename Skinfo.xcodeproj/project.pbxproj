@@ -18,6 +18,7 @@
 		0CD7329A23FCBA1400DF3A6D /* SkinfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7329923FCBA1400DF3A6D /* SkinfoUITests.swift */; };
 		500D9B86243C1F8900EA38DB /* SkiArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D9B85243C1F8900EA38DB /* SkiArea.swift */; };
 		5037C9F4243FD4C200E46F42 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037C9F3243FD4C200E46F42 /* Storage.swift */; };
+		5047D46A24411709002EA6D7 /* skiAreaDBtest.db in Resources */ = {isa = PBXBuildFile; fileRef = 5047D46924411709002EA6D7 /* skiAreaDBtest.db */; };
 		50F780E4243FE8680092594F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; };
 		50F780E5243FE8680092594F /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -217,10 +218,10 @@
 		0CD7329923FCBA1400DF3A6D /* SkinfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinfoUITests.swift; sourceTree = "<group>"; };
 		0CD7329B23FCBA1400DF3A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500D9B85243C1F8900EA38DB /* SkiArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiArea.swift; sourceTree = "<group>"; };
-		5037C9F2243FCCFC00E46F42 /* skiAreaDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = skiAreaDB.db; sourceTree = "<group>"; };
 		5037C9F3243FD4C200E46F42 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		5037C9F5243FDF4200E46F42 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SQLite.xcodeproj; sourceTree = "<group>"; };
 		5037CA0D243FDF6B00E46F42 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SQLite.xcodeproj; sourceTree = "<group>"; };
+		5047D46924411709002EA6D7 /* skiAreaDBtest.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = skiAreaDBtest.db; path = Skinfo/skiAreaDBtest.db; sourceTree = "<group>"; };
 		50F780CC243FE8630092594F /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +254,7 @@
 		0CD7326923FCBA0F00DF3A6D = {
 			isa = PBXGroup;
 			children = (
+				5047D46924411709002EA6D7 /* skiAreaDBtest.db */,
 				0CD7327423FCBA0F00DF3A6D /* Skinfo */,
 				0CD7328D23FCBA1400DF3A6D /* SkinfoTests */,
 				0CD7329823FCBA1400DF3A6D /* SkinfoUITests */,
@@ -275,7 +277,6 @@
 		0CD7327423FCBA0F00DF3A6D /* Skinfo */ = {
 			isa = PBXGroup;
 			children = (
-				5037C9F2243FCCFC00E46F42 /* skiAreaDB.db */,
 				0CD7327523FCBA0F00DF3A6D /* AppDelegate.swift */,
 				0CD7327723FCBA0F00DF3A6D /* SceneDelegate.swift */,
 				0CD7327923FCBA0F00DF3A6D /* MasterViewController.swift */,
@@ -630,6 +631,7 @@
 			files = (
 				0CD7328423FCBA1400DF3A6D /* LaunchScreen.storyboard in Resources */,
 				0CD7328123FCBA1400DF3A6D /* Assets.xcassets in Resources */,
+				5047D46A24411709002EA6D7 /* skiAreaDBtest.db in Resources */,
 				0CD7327F23FCBA0F00DF3A6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

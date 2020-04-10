@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Skinfo.xcodeproj">
+      location = "group:skiAreaDB.db">
+   </FileRef>
+   <FileRef
+      location = "group:../Skinfo/skiAreaDB.db">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
