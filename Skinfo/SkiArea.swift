@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-class Item: NSObject {
+class SkiArea: NSObject {
     var name: String
     
     //------------------------------------------------------------------------------------------------
@@ -24,4 +23,10 @@ class Item: NSObject {
     convenience init(random: Bool = false) {
         self.init(name: "Ski Area")
     }
+    
+    //------------------------------------------------------------------------------------------------
+    
+    
+    
 }
+
