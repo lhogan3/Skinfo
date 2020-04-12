@@ -11,11 +11,12 @@ import SQLite
 
 class Storage {
     
+    //Field Value: Array of all SkiArea objects (To be referenced in MasterViewController.swift)
     var allSkiAreas = [SkiArea]()
     
     //------------------------------------------------------------------------------------------------
     
-    func createItem() -> SkiArea {
+    func populateArray() {
         //This is all test code and will be replaced in the future when db is fully implemented
         
         //Copy skiArea db to documents folder stored directly on host device if not already there
@@ -51,9 +52,6 @@ class Storage {
             //Add new SkiArea object to allSkiAreas array for later data maniulation and display
             allSkiAreas.append(SkiArea(name: result[Name], trailCount: result[Trails], N: Float(result[N])!, W: Float(result[W])!))
         }
-        
-        let newItem = SkiArea(name: "Ski Area", trailCount: 100, N: 1.1, W: 2.2)
-        return newItem
     }
     
     //------------------------------------------------------------------------------------------------
@@ -100,13 +98,12 @@ class Storage {
         } else {
             print("Database file found at path: \(finalDatabaseURL.path)")
         }
-    
     }
     
     //------------------------------------------------------------------------------------------------
     
     init() {
-        createItem()
+        populateArray()
     }
     
 }
