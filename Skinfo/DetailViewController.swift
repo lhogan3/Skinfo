@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var skiArea: SkiArea!
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
