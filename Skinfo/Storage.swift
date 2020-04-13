@@ -11,52 +11,66 @@ import SQLite
 
 class Storage {
     
+    //Field Value: Array of all SkiArea objects (To be referenced in MasterViewController.swift)
+    var allSkiAreas = [SkiArea]()
+    
     //------------------------------------------------------------------------------------------------
     
-    func createItem() -> SkiArea {
-//        let path = Bundle.main.path(forResource: "db", ofType: "sqlite3")!
-//        let db = try! Connection(path, readonly: true)
+    func populateArray() {
+        //This is all test code and will be replaced in the future when db is fully implemented
         
-//        copyFilesFromBundleToDocumentsFolderWith(fileExtension: ".db")
-        copyDatabaseIfNeeded()
+        //Copy skiArea db to documents folder stored directly on host device if not already there
+        copyDBtoDocs()
         
-        let path = NSSearchPathForDirectoriesInDomains(
-            .documentDirectory, .userDomainMask, true
-        ).first!
-
-        let db = try! Connection("\(path)/skiAreaDBtest.db")
+        //Connect to database
+        let db = connectToDB()
         
+        //Table named skiAreas in db
         let skiAreas = Table("skiAreas")
         
-//        let name = Expression<String?>("name")
-        
+        //Create 'Expressions' in order to reference all column labels in queries
         let Name = Expression<String>("Name")
+        let Trails = Expression<Int>("Trails")
+        let N = Expression<String>("N")
+        let W = Expression<String>("W")
         
-//        for skiArea in try! db.prepare(skiAreas.select(names)) {
-//            print("id: \(skiAreas)")
-//            print(names)
-//            // id: 1, email: alice@mac.com
-//        }
+        //Number of entries in DB
+        let numSkiAreas = try! db.scalar(skiAreas.count)
         
-        let query = skiAreas.select(Name)
-        let results = try! db.prepare(query)
-        print(try! db.scalar("SELECT Name FROM skiAreas")!)
-
-        for item in results{
-            print(item)
+        //Loop same number of times as ski area entries in the DB
+        for i in 1...numSkiAreas {
+            
+            //Start query by selecting row by index (rowid)
+            let query = skiAreas.select(*).filter(rowid == Int64(i))
+            
+            //Execute query
+            let resultsArr = Array(try! db.prepare(query))
+            
+            //Only one entry is needed at a time, so index 0 will return desired Row object:
+            let result = resultsArr[0]
+            
+            //Add new SkiArea object to allSkiAreas array for later data maniulation and display
+            allSkiAreas.append(SkiArea(name: result[Name], trailCount: result[Trails], N: Float(result[N])!, W: Float(result[W])!))
         }
-        
-//        print(query)
-        
-//        print(names)
-        
-        let newItem = SkiArea(name: "Ski Area")
-        return newItem
     }
     
     //------------------------------------------------------------------------------------------------
     
-    func copyDatabaseIfNeeded() {
+    func connectToDB() -> Connection {
+    
+        //Path to documents folder
+        let path = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true
+        ).first!
+        
+        //Connect to db in documents folder
+        let db = try! Connection("\(path)/UVMSSCskiAreas.db")
+        return db
+    }
+    
+    //------------------------------------------------------------------------------------------------
+    
+    func copyDBtoDocs() {
         // Move database file from bundle to documents folder
         
         let fileManager = FileManager.default
@@ -68,12 +82,12 @@ class Storage {
             return // Could not find documents URL
         }
         
-        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent("skiAreaDBtest.db")
+        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent("UVMSSCskiAreas.db")
     
         if !( (try? finalDatabaseURL.checkResourceIsReachable()) ?? false) {
             print("DB does not exist in documents folder")
             
-            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent("skiAreaDBtest.db")
+            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent("UVMSSCskiAreas.db")
             
             do {
                   try fileManager.copyItem(atPath: (documentsURL?.path)!, toPath: finalDatabaseURL.path)
@@ -84,34 +98,12 @@ class Storage {
         } else {
             print("Database file found at path: \(finalDatabaseURL.path)")
         }
-    
-    }
-    
-    //------------------------------------------------------------------------------------------------
-    
-    func copyFilesFromBundleToDocumentsFolderWith(fileExtension: String) {
-        if let resPath = Bundle.main.resourcePath {
-            do {
-                let dirContents = try FileManager.default.contentsOfDirectory(atPath: resPath)
-                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-                let filteredFiles = dirContents.filter{ $0.contains(fileExtension)}
-                for fileName in filteredFiles {
-                    if let documentsURL = documentsURL {
-                        let sourceURL = Bundle.main.bundleURL.appendingPathComponent(fileName)
-                        let destURL = documentsURL.appendingPathComponent(fileName)
-                        do { try FileManager.default.copyItem(at: sourceURL, to: destURL) } catch {}
-                    }
-                }
-            } catch {
-            }
-        }
     }
     
     //------------------------------------------------------------------------------------------------
     
     init() {
-        createItem()
-    
+        populateArray()
     }
     
 }

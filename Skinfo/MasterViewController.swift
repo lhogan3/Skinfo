@@ -8,12 +8,17 @@
 
 import UIKit
 
+//====================================================================================================
+
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
     
+    //Array of all SkiArea objects: storage.allSkiAreas (See Storage.swift field value)
     var storage = Storage()
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +32,15 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     @objc
     func insertNewObject(_ sender: Any) {
@@ -39,6 +48,8 @@ class MasterViewController: UITableViewController {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     // MARK: - Segues
 
@@ -54,16 +65,22 @@ class MasterViewController: UITableViewController {
             }
         }
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -72,11 +89,15 @@ class MasterViewController: UITableViewController {
     
         return cell
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -87,6 +108,7 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    //----------------------------------------------------------------------------------------------------
 
 }
 

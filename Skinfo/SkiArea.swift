@@ -10,18 +10,24 @@ import Foundation
 
 class SkiArea: NSObject {
     var name: String
+    var trailCount: Int
+    var N: Float
+    var W: Float
     
     //------------------------------------------------------------------------------------------------
     
-    init(name: String) {
+    init(name: String, trailCount: Int, N: Float, W: Float) {
         self.name = name
+        self.trailCount = trailCount
+        self.N = N
+        self.W = W
         super.init()
     }
     
     //------------------------------------------------------------------------------------------------
     
     convenience init(random: Bool = false) {
-        self.init(name: "Ski Area")
+        self.init(name: "Ski Area", trailCount: 100, N: 1.1, W: 2.2)
     }
     
     //------------------------------------------------------------------------------------------------
