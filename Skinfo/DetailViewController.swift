@@ -10,10 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    //skiArea: The SkiArea object that was tapped and passed to this variable:
     var skiArea: SkiArea!
-
+    
+    @IBOutlet var skiAreaName: UILabel!
+    @IBOutlet var skiAreaTrails: UILabel!
+    @IBOutlet var skiAreaN: UILabel!
+    @IBOutlet var skiAreaW: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    //----------------------------------------------------------------------------------------------------
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -23,12 +29,18 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        skiAreaName.text = skiArea.name
+        skiAreaTrails.text = String(skiArea.trailCount)
         configureView()
     }
+    
+    //----------------------------------------------------------------------------------------------------
 
     var detailItem: NSDate? {
         didSet {
@@ -37,6 +49,7 @@ class DetailViewController: UIViewController {
         }
     }
 
+    //----------------------------------------------------------------------------------------------------
 
 }
 
