@@ -15,10 +15,10 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var skiAreaName: UILabel!
     @IBOutlet var skiAreaTrails: UILabel!
-    @IBOutlet var skiAreaN: UILabel!
-    @IBOutlet var skiAreaW: UILabel!
+    @IBOutlet var skiAreaHours: UILabel!
+    @IBOutlet var skiAreaAddress: UILabel!
+    @IBOutlet var skiAreaPrice: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
     //----------------------------------------------------------------------------------------------------
 
     func configureView() {
@@ -34,9 +34,13 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         skiAreaName.text = skiArea.name
         skiAreaTrails.text = String(skiArea.trailCount)
+        skiAreaHours.text = skiArea.hours
+        skiAreaAddress.text = skiArea.address
+        skiAreaPrice.text = "$\(skiArea.price)"
+        
         configureView()
     }
     

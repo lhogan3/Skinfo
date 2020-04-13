@@ -18,7 +18,7 @@
 		0CD7329A23FCBA1400DF3A6D /* SkinfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7329923FCBA1400DF3A6D /* SkinfoUITests.swift */; };
 		500D9B86243C1F8900EA38DB /* SkiArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500D9B85243C1F8900EA38DB /* SkiArea.swift */; };
 		5037C9F4243FD4C200E46F42 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037C9F3243FD4C200E46F42 /* Storage.swift */; };
-		5047D46E2443AA7D002EA6D7 /* UVMSSCskiAreas.db in Resources */ = {isa = PBXBuildFile; fileRef = 5047D46D2443AA7D002EA6D7 /* UVMSSCskiAreas.db */; };
+		5047D4702444F7F6002EA6D7 /* SSCskiAreas.db in Resources */ = {isa = PBXBuildFile; fileRef = 5047D46F2444F7F6002EA6D7 /* SSCskiAreas.db */; };
 		50F780E4243FE8680092594F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; };
 		50F780E5243FE8680092594F /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -221,7 +221,7 @@
 		5037C9F3243FD4C200E46F42 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		5037C9F5243FDF4200E46F42 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SQLite.xcodeproj; sourceTree = "<group>"; };
 		5037CA0D243FDF6B00E46F42 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SQLite.xcodeproj; sourceTree = "<group>"; };
-		5047D46D2443AA7D002EA6D7 /* UVMSSCskiAreas.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = UVMSSCskiAreas.db; sourceTree = "<group>"; };
+		5047D46F2444F7F6002EA6D7 /* SSCskiAreas.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSCskiAreas.db; sourceTree = "<group>"; };
 		50F780CC243FE8630092594F /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,7 +254,7 @@
 		0CD7326923FCBA0F00DF3A6D = {
 			isa = PBXGroup;
 			children = (
-				5047D46D2443AA7D002EA6D7 /* UVMSSCskiAreas.db */,
+				5047D46F2444F7F6002EA6D7 /* SSCskiAreas.db */,
 				0CD7327423FCBA0F00DF3A6D /* Skinfo */,
 				0CD7328D23FCBA1400DF3A6D /* SkinfoTests */,
 				0CD7329823FCBA1400DF3A6D /* SkinfoUITests */,
@@ -630,8 +630,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD7328423FCBA1400DF3A6D /* LaunchScreen.storyboard in Resources */,
-				5047D46E2443AA7D002EA6D7 /* UVMSSCskiAreas.db in Resources */,
 				0CD7328123FCBA1400DF3A6D /* Assets.xcassets in Resources */,
+				5047D4702444F7F6002EA6D7 /* SSCskiAreas.db in Resources */,
 				0CD7327F23FCBA0F00DF3A6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

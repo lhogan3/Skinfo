@@ -10,9 +10,12 @@ import Foundation
 import SQLite
 
 class Storage {
-    
+
     //Field Value: Array of all SkiArea objects (To be referenced in MasterViewController.swift)
     var allSkiAreas = [SkiArea]()
+    
+    //Database name:
+    let databaseName = "SSCskiAreas.db"
     
     //------------------------------------------------------------------------------------------------
     
@@ -33,6 +36,9 @@ class Storage {
         let Trails = Expression<Int>("Trails")
         let N = Expression<String>("N")
         let W = Expression<String>("W")
+        let Hours = Expression<String>("Hours")
+        let Address = Expression<String>("Address")
+        let Ticket_Price = Expression<String>("Ticket Price")
         
         //Number of entries in DB
         let numSkiAreas = try! db.scalar(skiAreas.count)
@@ -50,7 +56,7 @@ class Storage {
             let result = resultsArr[0]
             
             //Add new SkiArea object to allSkiAreas array for later data maniulation and display
-            allSkiAreas.append(SkiArea(name: result[Name], trailCount: result[Trails], N: Float(result[N])!, W: Float(result[W])!))
+            allSkiAreas.append(SkiArea(name: result[Name], trailCount: result[Trails], N: Float(result[N])!, W: Float(result[W])!, hours: result[Hours], address: result[Address], price: result[Ticket_Price]))
         }
     }
     
@@ -64,7 +70,7 @@ class Storage {
         ).first!
         
         //Connect to db in documents folder
-        let db = try! Connection("\(path)/UVMSSCskiAreas.db")
+        let db = try! Connection("\(path)/\(databaseName)")
         return db
     }
     
@@ -82,12 +88,12 @@ class Storage {
             return // Could not find documents URL
         }
         
-        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent("UVMSSCskiAreas.db")
+        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent(databaseName)
     
         if !( (try? finalDatabaseURL.checkResourceIsReachable()) ?? false) {
             print("DB does not exist in documents folder")
             
-            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent("UVMSSCskiAreas.db")
+            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent(databaseName)
             
             do {
                   try fileManager.copyItem(atPath: (documentsURL?.path)!, toPath: finalDatabaseURL.path)
