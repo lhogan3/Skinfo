@@ -74,9 +74,9 @@ class DetailViewController: UIViewController {
                                     
                                     
                                 }
-                                  self.SkiAreaType.image = UIImage(named: currentType);
-//                                self.skiAreaTemp.text = currentTemp;
-//                                self.skiAreaProb.text = currentProb;
+                                self.SkiAreaType.image = UIImage(named: currentType);
+                                self.skiAreaTemp.text = currentTemp;
+                                self.skiAreaProb.text = currentProb;
 //                                self.skiAreaType.text = currentType;
                              } catch let parsingError {
                                 print("Error", parsingError)
