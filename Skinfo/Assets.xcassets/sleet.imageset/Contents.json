@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sleet-11.png",
+      "filename" : "weather-6.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sleet-11@2x.png",
+      "filename" : "weather-06@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "sleet-11@3x.png",
+      "filename" : "weather-06@3x.png",
       "scale" : "3x"
     }
   ],

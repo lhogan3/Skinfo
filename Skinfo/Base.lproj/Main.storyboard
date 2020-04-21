@@ -31,8 +31,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-9S-wZq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="295"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-zv-2RT">
+                                        <rect key="frame" x="0.0" y="1" width="414" height="245"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.47843137250000001" green="0.47450980390000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="CYT-Gy-caB"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="krx-lR-TrX">
-                                <rect key="frame" x="8" y="332" width="398" height="485"/>
+                                <rect key="frame" x="8" y="379" width="398" height="429"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="145" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-61-u8h">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
@@ -152,36 +167,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-0Y-ZXX">
-                                        <rect key="frame" x="0.0" y="399" width="398" height="86"/>
+                                        <rect key="frame" x="0.0" y="399" width="398" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-tE-hBJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="193.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-d9-gCM">
-                                                <rect key="frame" x="199.5" y="0.0" width="198.5" height="86"/>
-                                                <color key="backgroundColor" red="0.50100909660000004" green="0.60718743389999996" blue="0.85048979920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </imageView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-9S-wZq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-zv-2RT">
-                                        <rect key="frame" x="8" y="3" width="398" height="161"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.47843137250000001" green="0.47450980390000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="CYT-Gy-caB"/>
-                                </constraints>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-d9-gCM">
+                                <rect key="frame" x="211" y="776" width="198.5" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.45566409699999999" green="0.5701065206" blue="0.85048979920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
