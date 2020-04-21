@@ -13,7 +13,8 @@ class DetailViewController: UIViewController {
     //skiArea: The SkiArea object that was tapped and passed to this variable:
     var skiArea: SkiArea!
     
-    @IBOutlet var skiAreaName: UILabel!
+    //@IBOutlet var skiAreaName: UILabel!
+    @IBOutlet weak var skiAreaName: UIImageView!
     @IBOutlet var skiAreaTrails: UILabel!
     @IBOutlet var skiAreaHours: UILabel!
     @IBOutlet var skiAreaAddress: UILabel!
@@ -41,7 +42,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         //Setting the constant data.
-        skiAreaName.text = skiArea.name
+       // skiAreaName.text = skiArea.name
+        
+        skiAreaName.image = UIImage(named: skiArea.name)
         skiAreaTrails.text = String(skiArea.trailCount)
         skiAreaHours.text = skiArea.hours
         skiAreaAddress.text = skiArea.address
@@ -71,7 +74,7 @@ class DetailViewController: UIViewController {
                                     
                                     
                                 }
-                                  self.SkiAreaType.image =  UIImage(named: currentType);
+                                  self.SkiAreaType.image = UIImage(named: currentType);
 //                                self.skiAreaTemp.text = currentTemp;
 //                                self.skiAreaProb.text = currentProb;
 //                                self.skiAreaType.text = currentType;
