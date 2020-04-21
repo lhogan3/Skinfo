@@ -39,6 +39,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-ri-0tB">
+                                        <rect key="frame" x="15" y="200" width="384" height="750"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.47843137250000001" green="0.47450980390000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,20 +54,20 @@
                                     <constraint firstAttribute="height" constant="200" id="CYT-Gy-caB"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="krx-lR-TrX">
-                                <rect key="frame" x="8" y="379" width="398" height="429"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="krx-lR-TrX">
+                                <rect key="frame" x="8" y="379" width="368" height="429"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="145" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-61-u8h">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Trail Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0b-wJ-ArD">
-                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176.5" height="36"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsT-PY-ubP">
-                                                <rect key="frame" x="351.5" y="0.0" width="46.5" height="36"/>
+                                                <rect key="frame" x="321.5" y="0.0" width="46.5" height="36"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -68,33 +76,34 @@
                                         <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-jH-UCj">
-                                        <rect key="frame" x="0.0" y="56" width="398" height="35"/>
+                                        <rect key="frame" x="0.0" y="56" width="368" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hours of Operation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-Gd-9re">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="308" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAL-li-vAy">
-                                                <rect key="frame" x="338" y="0.0" width="60" height="35"/>
+                                                <rect key="frame" x="308" y="0.0" width="60" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-Sd-Cdz">
-                                        <rect key="frame" x="0.0" y="111" width="398" height="35"/>
+                                        <rect key="frame" x="0.0" y="111" width="368" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ticket Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-wq-zWW">
-                                                <rect key="frame" x="0.0" y="0.0" width="206" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdZ-SA-pt7">
-                                                <rect key="frame" x="336" y="0.0" width="62" height="35"/>
+                                                <rect key="frame" x="306" y="0.0" width="62" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -102,16 +111,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-dU-Ipg">
-                                        <rect key="frame" x="0.0" y="166" width="398" height="53"/>
+                                        <rect key="frame" x="0.0" y="166" width="368" height="53"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-aq-Tmn">
-                                                <rect key="frame" x="0.0" y="9" width="177" height="35"/>
+                                                <rect key="frame" x="0.0" y="9" width="162" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Goes Here and Will be Big" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-3l-uRa">
-                                                <rect key="frame" x="221" y="0.0" width="177" height="53"/>
+                                                <rect key="frame" x="206" y="0.0" width="162" height="53"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -120,29 +129,29 @@
                                         <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c71-EN-7oS">
-                                        <rect key="frame" x="0.0" y="239" width="398" height="35"/>
+                                        <rect key="frame" x="0.0" y="239" width="368" height="35"/>
                                         <color key="backgroundColor" red="0.99805969000000005" green="0.82269835469999997" blue="0.60780334469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                         <color key="textColor" red="0.70002639290000002" green="0.29981875419999998" blue="0.19603976610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Pg-uG-3y0">
-                                        <rect key="frame" x="0.0" y="294" width="398" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="294" width="368" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-rf-Z9r">
-                                                <rect key="frame" x="0.0" y="0.0" width="280.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FR-2U-zTe">
-                                                <rect key="frame" x="296.5" y="0.0" width="60" height="32.5"/>
+                                                <rect key="frame" x="266.5" y="0.0" width="60" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-fL-4HU">
-                                                <rect key="frame" x="372.5" y="0.0" width="25.5" height="32.5"/>
+                                                <rect key="frame" x="342.5" y="0.0" width="25.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -150,16 +159,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8E-Hp-ArU">
-                                        <rect key="frame" x="0.0" y="346.5" width="398" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="346.5" width="368" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Precipitation Probability: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYU-Eq-TVL">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prob" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzH-Mo-cfj">
-                                                <rect key="frame" x="349" y="0.0" width="49" height="32.5"/>
+                                                <rect key="frame" x="319" y="0.0" width="49" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -167,10 +176,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-0Y-ZXX">
-                                        <rect key="frame" x="0.0" y="399" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="399" width="368" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-tE-hBJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="30"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -178,20 +187,20 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-d9-gCM">
-                                <rect key="frame" x="211" y="708" width="198.5" height="86"/>
+                                <rect key="frame" x="214" y="708" width="196" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.47843137250000001" green="0.47450980390000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.45566409699999999" green="0.5701065206" blue="0.85048979920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="krx-lR-TrX" secondAttribute="trailing" constant="8" id="1Lc-oQ-N5f"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="krx-lR-TrX" secondAttribute="trailing" constant="23" id="1Lc-oQ-N5f"/>
                             <constraint firstItem="krx-lR-TrX" firstAttribute="top" secondItem="6vp-9S-wZq" secondAttribute="bottom" constant="8" id="Lgr-Y5-FuJ"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="Oov-3b-Dsp"/>
-                            <constraint firstItem="krx-lR-TrX" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="8" id="XrC-Es-MYp"/>
+                            <constraint firstItem="krx-lR-TrX" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="23" id="XrC-Es-MYp"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="jfQ-3R-SjT"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="trailing" secondItem="VUw-jc-0yf" secondAttribute="trailing" id="lq9-YA-KId"/>
                         </constraints>
