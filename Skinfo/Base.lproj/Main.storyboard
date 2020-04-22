@@ -56,14 +56,20 @@
                                     <constraint firstItem="dlj-zv-2RT" firstAttribute="top" secondItem="6vp-9S-wZq" secondAttribute="top" constant="1" id="ukb-OS-QxO"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-d9-gCM">
+                                <rect key="frame" x="214" y="778" width="185" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rsJ-82-m1K"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="krx-lR-TrX">
-                                <rect key="frame" x="8" y="379" width="368" height="429"/>
+                                <rect key="frame" x="23" y="391" width="368" height="512"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="145" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-61-u8h">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-61-u8h">
                                         <rect key="frame" x="0.0" y="0.0" width="368" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Trail Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0b-wJ-ArD">
-                                                <rect key="frame" x="0.0" y="0.0" width="176.5" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="221.5" height="36"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -80,7 +86,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-jH-UCj">
                                         <rect key="frame" x="0.0" y="56" width="368" height="35"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hours of Operation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-Gd-9re">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hours:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-Gd-9re">
                                                 <rect key="frame" x="0.0" y="0.0" width="308" height="35"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                                 <nil key="textColor"/>
@@ -112,33 +118,30 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-dU-Ipg">
-                                        <rect key="frame" x="0.0" y="166" width="368" height="53"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-dU-Ipg">
+                                        <rect key="frame" x="0.0" y="166" width="368" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRP-aq-Tmn">
-                                                <rect key="frame" x="0.0" y="9" width="162" height="35"/>
-                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Goes Here and Will be Big" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-3l-uRa">
-                                                <rect key="frame" x="206" y="0.0" width="162" height="53"/>
+                                                <rect key="frame" x="0.0" y="22" width="368" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="AOk-FD-2LN"/>
+                                        </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c71-EN-7oS">
-                                        <rect key="frame" x="0.0" y="239" width="368" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c71-EN-7oS">
+                                        <rect key="frame" x="0.0" y="256" width="368" height="101"/>
                                         <color key="backgroundColor" red="0.99805969000000005" green="0.82269835469999997" blue="0.60780334469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                         <color key="textColor" red="0.70002639290000002" green="0.29981875419999998" blue="0.19603976610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Pg-uG-3y0">
-                                        <rect key="frame" x="0.0" y="294" width="368" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="377" width="368" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-rf-Z9r">
                                                 <rect key="frame" x="0.0" y="0.0" width="250.5" height="32.5"/>
@@ -161,7 +164,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8E-Hp-ArU">
-                                        <rect key="frame" x="0.0" y="346.5" width="368" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="429.5" width="368" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Precipitation Probability: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYU-Eq-TVL">
                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="32.5"/>
@@ -178,7 +181,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-0Y-ZXX">
-                                        <rect key="frame" x="0.0" y="399" width="368" height="30"/>
+                                        <rect key="frame" x="0.0" y="482" width="368" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-tE-hBJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="368" height="30"/>
@@ -191,16 +194,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.4823529412" green="0.65490196079999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-d9-gCM">
-                                <rect key="frame" x="214" y="708" width="196" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.47450980390000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.45566409699999999" green="0.5701065206" blue="0.85048979920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="krx-lR-TrX" secondAttribute="trailing" constant="23" id="1Lc-oQ-N5f"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="Fyf-d9-gCM" secondAttribute="bottom" constant="24" id="Bwu-u1-eJu"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="top" secondItem="p3g-ri-0tB" secondAttribute="top" constant="15" id="HL0-9h-JHb"/>
+                            <constraint firstItem="Fyf-d9-gCM" firstAttribute="trailing" secondItem="p3g-ri-0tB" secondAttribute="trailing" id="IUd-nY-e4U"/>
                             <constraint firstItem="krx-lR-TrX" firstAttribute="top" secondItem="6vp-9S-wZq" secondAttribute="bottom" constant="8" id="Lgr-Y5-FuJ"/>
                             <constraint firstItem="p3g-ri-0tB" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="15" id="NKM-AY-Mvg"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" id="Oov-3b-Dsp"/>
@@ -208,7 +209,9 @@
                             <constraint firstItem="p3g-ri-0tB" firstAttribute="bottom" secondItem="VUw-jc-0yf" secondAttribute="bottom" constant="166" id="YWs-SU-5l8"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" id="jfQ-3R-SjT"/>
                             <constraint firstItem="6vp-9S-wZq" firstAttribute="trailing" secondItem="VUw-jc-0yf" secondAttribute="trailing" id="lq9-YA-KId"/>
+                            <constraint firstItem="Fyf-d9-gCM" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="214" id="sjf-ZZ-0Pd"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="p3g-ri-0tB" secondAttribute="trailing" constant="15" id="vRw-1Y-iPc"/>
+                            <constraint firstItem="Fyf-d9-gCM" firstAttribute="top" secondItem="qsO-tE-hBJ" secondAttribute="top" id="ySQ-Qq-38Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>

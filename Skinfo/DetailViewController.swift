@@ -46,6 +46,7 @@ class DetailViewController: UIViewController {
         
         skiAreaName.image = UIImage(named: skiArea.name)
         skiAreaTrails.text = String(skiArea.trailCount)
+        print(skiArea.trailCount)
         skiAreaHours.text = skiArea.hours
         skiAreaAddress.text = skiArea.address
         skiAreaPrice.text = "$\(skiArea.price)"
