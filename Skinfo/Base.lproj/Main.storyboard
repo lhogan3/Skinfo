@@ -119,23 +119,24 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-dU-Ipg">
-                                        <rect key="frame" x="0.0" y="166" width="368" height="70"/>
+                                        <rect key="frame" x="0.0" y="166" width="368" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Goes Here and Will be Big" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-3l-uRa">
-                                                <rect key="frame" x="0.0" y="22" width="368" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="37.5" width="368" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.82016509140000005" blue="0.6075067958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="AOk-FD-2LN"/>
-                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c71-EN-7oS">
-                                        <rect key="frame" x="0.0" y="256" width="368" height="101"/>
+                                        <rect key="frame" x="0.0" y="287" width="368" height="70"/>
                                         <color key="backgroundColor" red="0.99805969000000005" green="0.82269835469999997" blue="0.60780334469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="ER5-aq-mXA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ttt-WU-xox"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="29"/>
                                         <color key="textColor" red="0.70002639290000002" green="0.29981875419999998" blue="0.19603976610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
