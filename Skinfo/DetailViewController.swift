@@ -42,47 +42,67 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         //Setting the constant data.
-       // skiAreaName.text = skiArea.name
-        
         skiAreaName.image = UIImage(named: skiArea.name)
         skiAreaTrails.text = String(skiArea.trailCount)
-        print(skiArea.trailCount)
         skiAreaHours.text = skiArea.hours
         skiAreaAddress.text = skiArea.address
         skiAreaPrice.text = "$\(skiArea.price)"
         
-        //Then retrieving infor from API and then setting these as well.
+        //Then retrieving info from API and then setting these as well...
+        //Make the endpoint the correct URL string with the coordinates from the DB for the given Ski Resort. Then make this URL String a URL object.
         let todoEndpoint: String = "https://api.darksky.net/forecast/5707632f3091ab596512817eb54bcff1/" + String(skiArea.N) + "," + String(skiArea.W) + "?exclude=minutely,,flags";
-                        let url = URLRequest(url: URL(string: todoEndpoint)!)
-                        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                        guard let dataResponse = data,
-                                  error == nil else {
-                                  print("Error in retrieving JSON data.")
-                                  return }
-                            do {
-                                //here dataResponse received from a network request
-                                let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any]
-                                let currently = jsonResponse!["currently"]! as! Dictionary<String,Any>;
-                                let currentTemp:String = String(describing: currently["temperature"]!)
-                                let currentProb:String = String(describing: currently["precipProbability"]!)
-                                let currentType:String;
-                                if(currentProb == "0"){
-                                    currentType = "None"
-                                   // UIImage(named: "NONE")
-                                }
-                                else{
-                                    currentType = String(describing: currently["precipType"]!);
-                                }
-                                DispatchQueue.main.async { // Correct
-                                    self.SkiAreaType.image = UIImage(named: currentType);
-                                    self.skiAreaTemp.text = currentTemp.trunc(length: 4);
-                                    self.skiAreaProb.text = currentProb;
-                                }
-                             } catch let parsingError {
-                                print("Error", parsingError)
-                           }
-                        }
-                        task.resume()
+        let url = URLRequest(url: URL(string: todoEndpoint)!);
+        
+        //This is what starts the GET Request.
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            //Handle if there is a nil return from the request.
+            guard let dataResponse = data,
+                  error == nil else {
+                  print("Error in retrieving JSON data.")
+                  return }
+            
+            //Otherwise, assuming that there is a return.
+            do {
+                //Need to start formatting the response. Start with making it a dictionary of String : Any.
+                let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any]
+                
+                //Then make it just the currently data, since this is the information that we are concerned with.
+                let currently = jsonResponse!["currently"]! as! Dictionary<String,Any>;
+                
+                //Set the information for the temperature and precipitation probability.
+                let currentTemp:String = String(describing: currently["temperature"]!)
+                let currentProb:String = String(describing: currently["precipProbability"]!)
+                
+                //Set the image for the precipication type based on whether the precipitation prob = 0 or not.
+                let currentType:String;
+                if(currentProb == "0"){
+                    
+                    //If 0 prob, then no precip, so set it to be the none image.
+                    currentType = "None"
+                }
+                
+                //Otherwise, there is precip. So set this to be the correct image from assets.
+                else{
+                    currentType = String(describing: currently["precipType"]!);
+                }
+                
+                //Create the async task and then set the fields with the information retrieved.
+                DispatchQueue.main.async { // Correct
+                    self.SkiAreaType.image = UIImage(named: currentType);
+                    self.skiAreaTemp.text = currentTemp.trunc(length: 4); //truncating the temperature to 4 characters. (i.e. 21.4 degrees)
+                    self.skiAreaProb.text = currentProb;
+                }
+             }
+            //catch an error in the parsing of the JSON.
+            catch let parsingError {
+                print("Error", parsingError)
+           }
+        }
+        //Stop parsing and resume the original task.
+        task.resume()
+        
+        //Configure the rest of the view. 
         configureView()
     }
     
