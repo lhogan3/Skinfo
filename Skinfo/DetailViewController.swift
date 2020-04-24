@@ -72,13 +72,12 @@ class DetailViewController: UIViewController {
                                 }
                                 else{
                                     currentType = String(describing: currently["precipType"]!);
-                                    
-                                    
                                 }
-                                self.SkiAreaType.image = UIImage(named: currentType);
-                                self.skiAreaTemp.text = currentTemp;
-                                self.skiAreaProb.text = currentProb;
-//                                self.skiAreaType.text = currentType;
+                                DispatchQueue.main.async { // Correct
+                                    self.SkiAreaType.image = UIImage(named: currentType);
+                                    self.skiAreaTemp.text = currentTemp.trunc(length: 4);
+                                    self.skiAreaProb.text = currentProb;
+                                }
                              } catch let parsingError {
                                 print("Error", parsingError)
                            }
@@ -98,5 +97,6 @@ class DetailViewController: UIViewController {
 
     //----------------------------------------------------------------------------------------------------
 
+    
 }
 

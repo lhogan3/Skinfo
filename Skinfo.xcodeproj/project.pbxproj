@@ -22,6 +22,7 @@
 		50F780E4243FE8680092594F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; };
 		50F780E5243FE8680092594F /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50F780D7243FE8630092594F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50FCA369244B7E3B006B6D63 /* SkiAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FCA361244B7E3A006B6D63 /* SkiAreaCell.swift */; };
+		EC905CD42453592800A5A1CD /* String-Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC905CD32453592800A5A1CD /* String-Truncation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		5047D46F2444F7F6002EA6D7 /* SSCskiAreas.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSCskiAreas.db; sourceTree = "<group>"; };
 		50F780CC243FE8630092594F /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		50FCA361244B7E3A006B6D63 /* SkiAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiAreaCell.swift; sourceTree = "<group>"; };
+		EC905CD32453592800A5A1CD /* String-Truncation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Truncation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 				0CD7327723FCBA0F00DF3A6D /* SceneDelegate.swift */,
 				0CD7327923FCBA0F00DF3A6D /* MasterViewController.swift */,
 				0CD7327B23FCBA0F00DF3A6D /* DetailViewController.swift */,
+				EC905CD32453592800A5A1CD /* String-Truncation.swift */,
 				0CD7327D23FCBA0F00DF3A6D /* Main.storyboard */,
 				0CD7328023FCBA1400DF3A6D /* Assets.xcassets */,
 				0CD7328223FCBA1400DF3A6D /* LaunchScreen.storyboard */,
@@ -665,6 +668,7 @@
 				0CD7327823FCBA0F00DF3A6D /* SceneDelegate.swift in Sources */,
 				50FCA369244B7E3B006B6D63 /* SkiAreaCell.swift in Sources */,
 				0CD7327A23FCBA0F00DF3A6D /* MasterViewController.swift in Sources */,
+				EC905CD42453592800A5A1CD /* String-Truncation.swift in Sources */,
 				0CD7327C23FCBA0F00DF3A6D /* DetailViewController.swift in Sources */,
 				5037C9F4243FD4C200E46F42 /* Storage.swift in Sources */,
 			);
