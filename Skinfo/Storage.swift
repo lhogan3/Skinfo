@@ -15,7 +15,7 @@ class Storage {
     var allSkiAreas = [SkiArea]()
     
     //Database name:
-    let databaseName = "SSCskiAreas.db"
+    let databaseName = "SSCskiAreas2.db"
     
     //------------------------------------------------------------------------------------------------
     
